@@ -286,7 +286,10 @@ createAuthDoc() {
     conversation: {
       service_credentials_name: params.conversation.service_credentials_name,
       apikey: params.conversation.apikey,
-      skill_id: params.conversation.skill_id
+      skill_id: params.conversation.skill_id,
+      username: params.conversation.username,
+      password: params.conversation.password,
+      workspace_id: params.conversation.workspace_id,
     }
   };
   doc[channel] = params.channel[channel];
