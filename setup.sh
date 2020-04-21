@@ -284,9 +284,9 @@ createAuthDoc() {
   const channel = params.channel.name;
   const doc = {
     conversation: {
-      username: params.conversation.username,
-      password: params.conversation.password,
-      workspace_id: params.conversation.workspace_id
+      service_credentials_name: params.conversation.service_credentials_name,
+      apikey: params.conversation.apikey,
+      skill_id: params.conversation.skill_id
     }
   };
   doc[channel] = params.channel[channel];
