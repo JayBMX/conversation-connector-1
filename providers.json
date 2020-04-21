@@ -23,8 +23,7 @@
       "conversation": {
         "username": "xxxx",
         "password": "xxxx",
-        "workspace_id": "xxxx",
-        "apikey": "xxxx",
+        "workspace_id": "xxxx"
       },
       "name": "xxxx"
     }
