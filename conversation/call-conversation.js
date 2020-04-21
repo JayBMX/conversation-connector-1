@@ -61,16 +61,32 @@ function main(params) {
       auth.conversation.workspace_id,
       'conversation workspace_id absent in auth.conversation'
     );
+   assert(
+      auth.conversation.skill_id,
+      'conversation skill_id absent in auth.conversation'
+    );
+   assert(
+      auth.conversation.service_credentials_name,
+      'conversation service_credentials_name absent in auth.conversation'
+    );
+    assert(
+      auth.conversation.apikey,
+      'conversation apikey absent in auth.conversation'
+    );
 
     const conversation = new ConversationV1({
       username: auth.conversation.username,
       password: auth.conversation.password,
+      service_credentials_name: auth.conversation.service_credentials_name,
+      apikey: auth.conversation.apikey,
+     
       url: params.url,
       version: params.version || 'v1',
       version_date: params.version_date || '2020-04-01'
     });
     const payload = Object.assign({}, params.conversation);
     payload.workspace_id = auth.conversation.workspace_id;
+    payload.skill_id = auth.conversation.skill_id;
 
     conversation.message(payload, (err, response) => {
       if (err) {
