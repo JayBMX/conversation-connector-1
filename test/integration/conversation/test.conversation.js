@@ -47,7 +47,9 @@ describe('conversation integration tests', () => {
           conversation: {
             username: envParams.__TEST_CONVERSATION_USERNAME,
             password: envParams.__TEST_CONVERSATION_PASSWORD,
-            workspace_id: envParams.__TEST_CONVERSATION_WORKSPACE_ID
+            workspace_id: envParams.__TEST_CONVERSATION_WORKSPACE_ID,
+            apikey: envParams.__TEST_CONVERSATION_APIKEY,
+            service_credentials_name: envParams.__TEST_CONVERSATION_SERVICE_CREDENTIALS_NAME
           }
         }
       }
@@ -60,7 +62,9 @@ describe('conversation integration tests', () => {
       password: envParams.__TEST_CONVERSATION_PASSWORD,
       workspace_id: envParams.__TEST_CONVERSATION_WORKSPACE_ID,
       version_date: envParams.__TEST_CONVERSATION_VERSION_DATE,
-      version: envParams.__TEST_CONVERSATION_VERSION
+      version: envParams.__TEST_CONVERSATION_VERSION,
+      apikey: envParams.__TEST_CONVERSATION_APIKEY,
+      service_credentials_name: envParams.__TEST_CONVERSATION_SERVICE_CREDENTIALS_NAME
     });
   });
 
